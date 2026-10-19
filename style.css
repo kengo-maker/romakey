@@ -67,3 +67,26 @@ footer p { margin: 4px 0; }
 .privacy .card { max-width: 46rem; margin-inline: auto; padding: 32px 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg2); }
 .privacy .card p { margin: 0 0 10px; }
 .req { margin: 10px 0 0; }
+
+/* 入力回数の比較（2026-10-20） */
+.count { padding-top: 56px; }
+.count-sub { margin: 0 0 18px; color: var(--sub); }
+.count-lead { margin: 18px 0 6px; font-weight: 600; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; }
+.compare { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.compare th, .compare td { padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line); }
+.compare td { white-space: nowrap; }
+.compare .yomi { display: block; font-size: 0.78rem; color: var(--sub); font-weight: 400; }
+.compare th[scope=row], .compare thead th:first-child { text-align: left; font-weight: 500; }
+.compare thead th { color: var(--sub); font-weight: 500; font-size: 0.85rem; background: var(--bg2); }
+.compare td strong { color: var(--accent); }
+.compare tr.total th, .compare tr.total td { border-bottom: 0; background: var(--bg2); font-weight: 600; }
+
+/* プレミアム（2026-10-20） */
+.premium-list { margin: 10px 0 14px; padding-left: 1.3em; }
+.premium-list li { margin: 4px 0; }
+.premium .price { font-weight: 700; color: var(--accent); margin: 8px 0; }
+@media (max-width: 559px) {
+  .compare .romaji { display: none; }   /* 狭い画面ではローマ字入力の列を省く（本文に書いてある） */
+  .compare th, .compare td { padding: 9px 10px; }
+}
