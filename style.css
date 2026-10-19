@@ -1,0 +1,69 @@
+/* ローマキーのサイト（2026-10-19）。アプリと同じ黒鉛色と砂色 */
+:root {
+  --bg: #15171a;
+  --bg2: #1d2024;
+  --line: #2c3036;
+  --text: #e9e7e3;
+  --sub: #a9a59d;
+  --accent: #c9ab82;
+  --accent-text: #1b1a17;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  font-feature-settings: "palt";
+  /* 日本語を文節で折り返す（対応しているブラウザだけ）。見出しは行の長さをそろえる */
+  word-break: auto-phrase;
+  text-wrap: pretty;
+  letter-spacing: 0.02em;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { width: min(100% - 40px, 1040px); margin-inline: auto; }
+.small { font-size: 0.85rem; color: var(--sub); }
+
+.hero { padding: 72px 0 56px; text-align: center; background: radial-gradient(120% 80% at 50% 0%, #262a30 0%, var(--bg) 70%); }
+.app-icon { margin: 0 auto 20px; border-radius: 26px; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.hero h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 3.4rem); letter-spacing: 0.06em; }
+.tagline { margin: 6px 0 18px; font-size: clamp(1.1rem, 3.6vw, 1.45rem); color: var(--accent); font-weight: 600; }
+.lead { margin: 0 auto; max-width: 34em; color: var(--text); }
+.badge { display: inline-block; margin: 26px 0 0; padding: 8px 18px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 0.92rem; }
+br.pc { display: none; }
+@media (min-width: 720px) { br.pc { display: inline; } }
+
+main section { padding: 56px 0; border-top: 1px solid var(--line); }
+h1, h2 { text-wrap: balance; }
+h2 { margin: 0 0 12px; font-size: clamp(1.35rem, 4.4vw, 1.75rem); line-height: 1.45; }
+.num { margin: 0; color: var(--accent); font-weight: 700; letter-spacing: 0.15em; font-size: 0.9rem; }
+.feature { display: grid; gap: 28px; align-items: center; }
+.feature p { margin: 0 0 10px; }
+.feature figure { margin: 0; }
+.feature figure img { border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+@media (min-width: 820px) {
+  .feature { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .feature.reverse .text { order: 2; }
+}
+
+.themes .grid { display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 20px; }
+.themes .grid img { border-radius: 14px; border: 1px solid var(--line); }
+@media (min-width: 720px) { .themes .grid { grid-template-columns: repeat(3, 1fr); } }
+
+.howto ol { margin: 0; padding-left: 1.4em; }
+.howto li { margin: 6px 0; }
+.note { color: var(--sub); font-size: 0.95rem; margin-top: 14px; }
+
+.contact { text-align: center; }
+.contact .mail { font-size: 1.15rem; margin: 18px 0 6px; }
+.contact .mail a { display: inline-block; padding: 12px 22px; border-radius: 12px; background: var(--accent); color: var(--accent-text); text-decoration: none; font-weight: 600; word-break: break-all; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; text-align: center; }
+footer p { margin: 4px 0; }
+
+.privacy .card { max-width: 46rem; margin-inline: auto; padding: 32px 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg2); }
+.privacy .card p { margin: 0 0 10px; }
+.req { margin: 10px 0 0; }
